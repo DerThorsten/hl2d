@@ -1,0 +1,11 @@
+name: hl2d-docs
+
+channels:
+  - conda-forge
+
+dependencies:
+  - cmake
+  - xtensor
+  - xtensor-python
+  
+  - breathe

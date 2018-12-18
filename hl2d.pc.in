@@ -1,0 +1,8 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/include
+
+Name: hl2d
+Description:  hl2d is a library where I have fun with modern C++ and use it for some fun with liquidfun/box2d
+Version: @hl2d_VERSION@
+Cflags: -I${includedir}

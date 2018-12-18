@@ -1,0 +1,44 @@
+package:
+  name: hl2d
+  version: 0.1.0
+
+source:
+  path: ../
+
+
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - cmake >=3.1
+    - python >= 3.6
+    - numpy
+    - xtl
+    - xtensor
+    - xtensor-python
+    
+  run:
+    - numpy
+    - python >= 3.6
+test:
+  commands:
+    - test -d ${PREFIX}/include/hl2d           # [unix]
+    - test -f ${PREFIX}/include/hl2d/hl2d.hpp # [unix]
+    - if exist %LIBRARY_PREFIX%\include\hl2d\hl2d.hpp (exit 0) else (exit 1)  # [win]
+
+about:
+  home:  https://github.com/DerThorsten/hl2d
+  license: MIT
+  license_family: MIT
+  
+  summary: 'hl2d is a library where I have fun with modern C++ and use it for some fun with liquidfun/box2d'
+  description: ' hl2d is a library where I have fun with modern C++ and use it for some fun with liquidfun/box2d'
+  documentation_url: https://readthedocs.org/projects/hl2d/
+  dev_url: https://github.com/DerThorsten/hl2d
+
+extra:
+  recipe-maintainers:
+    - Thorsten Beier
+

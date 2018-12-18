@@ -1,0 +1,12 @@
+# hl2d cmake module
+# This module sets the following variables in your project::
+#
+#   hl2d_FOUND - true if hl2d found on the system
+#   hl2d_INCLUDE_DIRS - the directory containing hl2d headers
+#   hl2d_LIBRARY - empty
+
+
+if(NOT TARGET @PROJECT_NAME@)
+  include("${CMAKE_CURRENT_LIST_DIR}/@PROJECT_NAME@Targets.cmake")
+  get_target_property(@PROJECT_NAME@_INCLUDE_DIRS hl2d INTERFACE_INCLUDE_DIRECTORIES)
+endif()
